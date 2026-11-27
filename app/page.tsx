@@ -119,7 +119,7 @@ export default function Home() {
               <Reveal>
                 <p className="eyebrow">Visit us</p>
                 <h2 className="h2">
-                  Find us on <span className="accent">Yari Road</span>
+                  Locate us <span className="accent">on maps</span>
                 </h2>
               </Reveal>
               <Reveal delay={0.1} className="visit__info">
