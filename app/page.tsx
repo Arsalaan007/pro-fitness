@@ -4,7 +4,7 @@ import Gallery from "@/components/Gallery";
 import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import Image from "next/image";
-import { images, logoSrc, programs, site, tel } from "@/lib/site";
+import { images, logoSrc, programs, site, tel, testimonials } from "@/lib/site";
 
 const words = ["Strength", "Conditioning", "Fat loss", "Muscle", "Discipline", "Personal training"];
 
@@ -103,6 +103,33 @@ export default function Home() {
         </section>
 
         <Gallery />
+
+        {/* Testimonials */}
+        <section className="section" id="reviews">
+          <div className="container">
+            <Reveal className="section__head">
+              <p className="eyebrow">Members</p>
+              <h2 className="h2">
+                In their <span className="accent">words</span>
+              </h2>
+            </Reveal>
+            <p className="quotes__hint" aria-hidden="true">Swipe to read more →</p>
+            <div className="quotes">
+              {testimonials.map((t, i) => (
+                <Reveal key={t.name} delay={(i % 3) * 0.08} className="quote" viewport={{ once: true, amount: 0.05 }}>
+                  <span className="quote__mark" aria-hidden="true">
+                    &ldquo;
+                  </span>
+                  <blockquote>{t.quote}</blockquote>
+                  <p className="quote__name">
+                    {t.name}
+                    <span>Member</span>
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Visit */}
         <section className="section section--alt" id="visit">

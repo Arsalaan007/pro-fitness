@@ -72,3 +72,35 @@ export const nav = [
   { href: "#gallery", label: "Gallery" },
   { href: "#visit", label: "Visit" },
 ];
+
+// Member testimonials (real reviews, lightly trimmed for length). First name + initial only, no photos.
+export const testimonials = [
+  {
+    quote:
+      "Great gym with good equipment and a positive atmosphere. The staff is helpful and the trainers are supportive. The gym is clean and well-maintained. Overall a great place for anyone serious about fitness.",
+    name: "Moosa D.",
+  },
+  {
+    quote:
+      "Pro Fitness has honestly been great for my routine. The equipment is good, the place is clean, and the trainers are really supportive without being too pushy. The vibe keeps me motivated to show up every day.",
+    name: "Deeya B.",
+  },
+  {
+    quote:
+      "Amazing gym with top-quality equipment and a very aesthetic setup. Cleanliness is perfectly maintained, which makes the workout experience even better. The owner is very kind, supportive, and always ready to help.",
+    name: "Tarang B.",
+  },
+  {
+    quote:
+      "One of the best gyms I have worked out in. Top notch equipment and so spacious. Cleanliness 100/100, vibe 100000/100. Anyone who lives nearby should really try this gym, it won't disappoint you.",
+    name: "Twinkle T.",
+  },
+  {
+    quote: "Superb machines, superb vibe and very supportive and warm staff. And very reasonable price also.",
+    name: "Priyanka S.",
+  },
+  {
+    quote: "One of the best gyms in Versova, with good ambience and great trainers. The owner and trainers are so friendly.",
+    name: "Nitin P.",
+  },
+];
