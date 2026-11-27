@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Photo from "./Photo";
 import Reveal from "./Reveal";
+import Parallax from "./Parallax";
 import { images } from "@/lib/site";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -41,7 +42,9 @@ export default function Gallery() {
           {items.map((img, i) => (
             <Reveal key={img.src} delay={(i % 3) * 0.08} className={`gallery__item g${i + 1}`}>
               <button onClick={() => setActive(i)} aria-label={`Open photo: ${img.alt}`}>
-                <Photo src={img.src} alt={img.alt} sizes="(max-width: 900px) 50vw, 33vw" />
+                <Parallax amount={6}>
+                  <Photo src={img.src} alt={img.alt} sizes="(max-width: 900px) 50vw, 33vw" />
+                </Parallax>
               </button>
             </Reveal>
           ))}

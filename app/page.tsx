@@ -4,6 +4,7 @@ import Gallery from "@/components/Gallery";
 import TestimonialDeck from "@/components/TestimonialDeck";
 import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
+import Parallax from "@/components/Parallax";
 import Image from "next/image";
 import { images, logoSrc, programs, site, tel } from "@/lib/site";
 
@@ -33,7 +34,9 @@ export default function Home() {
         <section className="section" id="about">
           <div className="container about">
             <Reveal className="about__media">
-              <Photo src={images.about} alt="Training at Pro Fitness" sizes="(max-width: 900px) 100vw, 50vw" />
+              <Parallax amount={7}>
+                <Photo src={images.about} alt="Training at Pro Fitness" sizes="(max-width: 900px) 100vw, 50vw" />
+              </Parallax>
             </Reveal>
             <div className="about__text">
               <Reveal>

@@ -594,6 +594,10 @@ img { display: block; max-width: 100%; }
   .visit .hero__ctas { order: 4; }
 }
 
+/* Parallax: picture is a little taller than its frame and drifts inside it */
+.parallax { position: absolute; inset: 0; overflow: hidden; border-radius: inherit; }
+.parallax__inner { position: absolute; inset: -9% 0; will-change: transform; }
+
 /* Responsive */
 @media (max-width: 1100px) {
   .programs { grid-template-columns: repeat(2, 1fr); }
