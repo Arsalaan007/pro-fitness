@@ -482,11 +482,6 @@ img { display: block; max-width: 100%; }
 .program:nth-child(2)::after { animation-delay: -2.25s; }
 .program:nth-child(3)::after { animation-delay: -4.5s; }
 .program:nth-child(4)::after { animation-delay: -6.75s; }
-.gallery__item.glow-border::after { opacity: 0.35; animation-duration: 12s; }
-.gallery__item:nth-child(2)::after { animation-delay: -3s; }
-.gallery__item:nth-child(3)::after { animation-delay: -6s; }
-.gallery__item:nth-child(4)::after { animation-delay: -9s; }
-.gallery__item:nth-child(5)::after { animation-delay: -4.5s; }
 .map.glow-border::after { opacity: 0.6; animation-duration: 14s; }
 @keyframes border-orbit { to { --ang: 360deg; } }
 @media (prefers-reduced-motion: reduce) { .glow-border::after { animation: none; opacity: 0.2; } }

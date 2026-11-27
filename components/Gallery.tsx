@@ -39,7 +39,7 @@ export default function Gallery() {
 
         <div className="gallery">
           {items.map((img, i) => (
-            <Reveal key={img.src} delay={(i % 3) * 0.08} className={`gallery__item glow-border g${i + 1}`}>
+            <Reveal key={img.src} delay={(i % 3) * 0.08} className={`gallery__item g${i + 1}`}>
               <button onClick={() => setActive(i)} aria-label={`Open photo: ${img.alt}`}>
                 <Photo src={img.src} alt={img.alt} sizes="(max-width: 900px) 50vw, 33vw" />
               </button>
