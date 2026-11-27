@@ -584,6 +584,16 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 360px) { .deck { height: 440px; } }
 
+/* Visit: on mobile the map sits between the heading and the address */
+@media (max-width: 899px) {
+  .visit { display: flex; flex-direction: column; gap: 0; }
+  .visit__text { display: contents; }
+  .visit__head { order: 1; }
+  .visit .map { order: 2; margin-bottom: 40px; }
+  .visit__info { order: 3; }
+  .visit .hero__ctas { order: 4; }
+}
+
 /* Responsive */
 @media (max-width: 1100px) {
   .programs { grid-template-columns: repeat(2, 1fr); }

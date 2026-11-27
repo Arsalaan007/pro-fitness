@@ -115,8 +115,8 @@ export default function Home() {
         {/* Visit */}
         <section className="section section--alt" id="visit">
           <div className="container visit">
-            <div>
-              <Reveal>
+            <div className="visit__text">
+              <Reveal className="visit__head">
                 <p className="eyebrow">Visit us</p>
                 <h2 className="h2">
                   Locate us <span className="accent">on maps</span>
