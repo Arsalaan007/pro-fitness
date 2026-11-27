@@ -491,6 +491,28 @@ img { display: block; max-width: 100%; }
 @keyframes border-orbit { to { --ang: 360deg; } }
 @media (prefers-reduced-motion: reduce) { .glow-border::after { animation: none; opacity: 0.2; } }
 
+
+/* Breathing glow: a soft orange halo that pulses slowly behind photos */
+@keyframes breathe {
+  0%, 100% { box-shadow: 0 0 34px 0 rgba(255, 90, 31, 0.10), 0 0 0 1px rgba(255, 90, 31, 0.10); }
+  50% { box-shadow: 0 0 70px 6px rgba(255, 90, 31, 0.30), 0 0 0 1px rgba(255, 90, 31, 0.28); }
+}
+.about__media, .gallery__item { animation: breathe 4.8s ease-in-out infinite; }
+.gallery__item:nth-child(2) { animation-delay: -0.96s; }
+.gallery__item:nth-child(3) { animation-delay: -1.92s; }
+.gallery__item:nth-child(4) { animation-delay: -2.88s; }
+.gallery__item:nth-child(5) { animation-delay: -3.84s; }
+@media (max-width: 899px) {
+  @keyframes breathe-sm {
+    0%, 100% { box-shadow: 0 0 22px 0 rgba(255, 90, 31, 0.10), 0 0 0 1px rgba(255, 90, 31, 0.10); }
+    50% { box-shadow: 0 0 40px 3px rgba(255, 90, 31, 0.28), 0 0 0 1px rgba(255, 90, 31, 0.26); }
+  }
+  .about__media, .gallery__item { animation-name: breathe-sm; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about__media, .gallery__item { animation: none; box-shadow: 0 0 40px 2px rgba(255, 90, 31, 0.16); }
+}
+
 /* Responsive */
 @media (max-width: 1100px) {
   .programs { grid-template-columns: repeat(2, 1fr); }
