@@ -7,7 +7,7 @@ export const site = {
   area: "Versova, Mumbai",
   address: "65, Opp. Police Officers Society, Aram Nagar Part 2, Jeet Nagar, Versova, Andheri West, Mumbai 400061",
   hours: [
-    { days: "Monday to Saturday", time: "6:00 AM to midnight" },
+    { days: "Monday to Saturday", time: "6:00 AM to 12:00 AM (midnight)" },
     { days: "Sunday", time: "9:00 AM to 3:00 PM" },
   ],
   phone: "+91 99877 27997", // from the Google listing; every "Call to book" button dials this
