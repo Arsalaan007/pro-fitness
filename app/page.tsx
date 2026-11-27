@@ -1,10 +1,11 @@
 import Nav from "@/components/Nav";
 import Hero, { Arrow } from "@/components/Hero";
 import Gallery from "@/components/Gallery";
+import TestimonialDeck from "@/components/TestimonialDeck";
 import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import Image from "next/image";
-import { images, logoSrc, programs, site, tel, testimonials } from "@/lib/site";
+import { images, logoSrc, programs, site, tel } from "@/lib/site";
 
 const words = ["Strength", "Conditioning", "Fat loss", "Muscle", "Discipline", "Personal training"];
 
@@ -107,32 +108,7 @@ export default function Home() {
         {/* Testimonials */}
         <section className="section" id="reviews">
           <div className="container">
-            <Reveal className="section__head">
-              <p className="eyebrow">Members</p>
-              <h2 className="h2">
-                <span className="accent">Testimonials</span>
-              </h2>
-            </Reveal>
-          </div>
-          <div className="wall" aria-label="Member testimonials">
-            {[
-              { list: testimonials, dir: "left" },
-              { list: [...testimonials].reverse(), dir: "right" },
-            ].map((row, r) => (
-              <div className={`wall__row wall__row--${row.dir}`} key={r}>
-                <div className="wall__track">
-                  {[...row.list, ...row.list].map((t, i) => (
-                    <figure className="quote" key={i} aria-hidden={i >= row.list.length ? true : undefined}>
-                      <span className="quote__mark" aria-hidden="true">
-                        &ldquo;
-                      </span>
-                      <blockquote>{t.quote}</blockquote>
-                      <figcaption className="quote__name">{t.name}</figcaption>
-                    </figure>
-                  ))}
-                </div>
-              </div>
-            ))}
+            <TestimonialDeck />
           </div>
         </section>
 
