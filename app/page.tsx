@@ -64,7 +64,7 @@ export default function Home() {
               <Reveal delay={0.4} className="stats">
                 <div>
                   <strong>18</strong>
-                  <span>Hours open, Mon to Sat</span>
+                  <span>Hours per day open, Mon to Sat</span>
                 </div>
                 <div>
                   <strong>7</strong>
