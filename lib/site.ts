@@ -17,7 +17,8 @@ export const site = {
   // Google Maps listing for the gym (used for the "Get directions" button and the embedded map)
   mapsUrl:
     "https://www.google.com/maps?udm&fvr=1&pvq=Cg0vZy8xMXhwMjJfczlwIhEKC3BybyBmaXRuZXNzEAIYA4kBHJMkxzOkkLI&lqi=Cgtwcm8gZml0bmVzc0i1wr-h1LyAgAhaFRAAEAEYABgBIgtwcm8gZml0bmVzc5IBA2d5bQ&vet=10CAAQoqAOahcKEwiY2eTM06eYAxUAAAAAHQAAAAAQCg..i&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&ftid=0x3be7b70046ec77b1:0xb290a433c724931c",
-  mapEmbed: "https://maps.google.com/maps?cid=12866964677688857372&output=embed",
+  // Plain map centred on the gym (no Google place card or rating); our own pin sits on top
+  mapEmbed: "https://maps.google.com/maps?ll=19.135287,72.813245&z=17&output=embed",
   coords: { lat: 19.135287, lng: 72.813245 },
   amenities: ["Fully air-conditioned", "Free Wi-Fi", "Chilled water", "Free weights & machines"],
 };

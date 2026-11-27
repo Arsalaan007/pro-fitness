@@ -145,7 +145,25 @@ export default function Home() {
               </Reveal>
             </div>
             <Reveal delay={0.15} className="map glow-border">
-              <iframe src={site.mapEmbed} title="Pro Fitness on Google Maps" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+              <iframe
+                src={site.mapEmbed}
+                title="Map showing Pro Fitness on Yari Road, Versova"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                tabIndex={-1}
+                aria-hidden="true"
+              />
+              <a className="map__link" href={site.mapsUrl} target="_blank" rel="noreferrer" aria-label="Open Pro Fitness in Google Maps">
+                <span className="map__pin" aria-hidden="true">
+                  <span className="map__pulse" />
+                  <svg width="34" height="44" viewBox="0 0 34 44" fill="none">
+                    <path d="M17 43s15-14.2 15-26A15 15 0 0 0 2 17c0 11.8 15 26 15 26Z" fill="#ff5a1f" stroke="#0a0a0a" strokeWidth="2" />
+                    <circle cx="17" cy="17" r="5.5" fill="#0a0a0a" />
+                  </svg>
+                </span>
+                <span className="map__label">Pro Fitness</span>
+                <span className="map__open">Open in Google Maps ↗</span>
+              </a>
             </Reveal>
           </div>
         </section>
