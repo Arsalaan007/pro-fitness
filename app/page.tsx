@@ -110,7 +110,7 @@ export default function Home() {
             <Reveal className="section__head">
               <p className="eyebrow">Members</p>
               <h2 className="h2">
-                In their <span className="accent">words</span>
+                <span className="accent">Testimonials</span>
               </h2>
             </Reveal>
             <p className="quotes__hint" aria-hidden="true">Swipe to read more →</p>

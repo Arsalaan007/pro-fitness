@@ -70,6 +70,7 @@ export const nav = [
   { href: "#about", label: "About" },
   { href: "#programs", label: "Programs" },
   { href: "#gallery", label: "Gallery" },
+  { href: "#reviews", label: "Testimonials" },
   { href: "#visit", label: "Visit" },
 ];
 
