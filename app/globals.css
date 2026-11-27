@@ -449,6 +449,8 @@ img { display: block; max-width: 100%; }
 /* Footer */
 .footer { border-top: 1px solid var(--line); padding: 48px 0; }
 .footer__inner { display: grid; grid-template-columns: auto 1fr auto; gap: 24px 48px; align-items: center; }
+.footer__logo { display: block; line-height: 0; }
+.footer__logo img { height: 84px; width: auto; }
 .footer__inner > p { color: var(--muted); font-size: 14px; }
 .footer__links { display: flex; gap: 24px; font-size: 14px; }
 .footer__links a { transition: color 0.3s; }

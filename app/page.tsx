@@ -3,7 +3,8 @@ import Hero, { Arrow } from "@/components/Hero";
 import Gallery from "@/components/Gallery";
 import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
-import { images, programs, site, tel } from "@/lib/site";
+import Image from "next/image";
+import { images, logoSrc, programs, site, tel } from "@/lib/site";
 
 const words = ["Strength", "Conditioning", "Fat loss", "Muscle", "Discipline", "Personal training"];
 
@@ -170,8 +171,8 @@ export default function Home() {
 
       <footer className="footer">
         <div className="container footer__inner">
-          <a href="#top" className="logo">
-            PRO<span>/</span>FITNESS
+          <a href="#top" className="footer__logo" aria-label="Pro Fitness home">
+            <Image src={logoSrc} alt="Pro Fitness" width={480} height={219} />
           </a>
           <p>{site.address}</p>
           <div className="footer__links">
