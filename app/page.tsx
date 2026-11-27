@@ -127,10 +127,7 @@ export default function Home() {
                         &ldquo;
                       </span>
                       <blockquote>{t.quote}</blockquote>
-                      <figcaption className="quote__name">
-                        {t.name}
-                        <span>Member</span>
-                      </figcaption>
+                      <figcaption className="quote__name">{t.name}</figcaption>
                     </figure>
                   ))}
                 </div>
