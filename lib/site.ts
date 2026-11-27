@@ -13,7 +13,7 @@ export const site = {
   phone: "+91 99877 27997", // from the Google listing; every "Call to book" button dials this
   // TODO: confirm WhatsApp number (digits only, with country code) and add the Instagram link
   whatsapp: "919987727997",
-  instagram: "https://instagram.com/",
+  instagram: "https://www.instagram.com/profitnessmumbai/",
   // Google Maps listing for the gym (used for the "Get directions" button and the embedded map)
   mapsUrl:
     "https://www.google.com/maps?udm&fvr=1&pvq=Cg0vZy8xMXhwMjJfczlwIhEKC3BybyBmaXRuZXNzEAIYA4kBHJMkxzOkkLI&lqi=Cgtwcm8gZml0bmVzc0i1wr-h1LyAgAhaFRAAEAEYABgBIgtwcm8gZml0bmVzc5IBA2d5bQ&vet=10CAAQoqAOahcKEwiY2eTM06eYAxUAAAAAHQAAAAAQCg..i&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&ftid=0x3be7b70046ec77b1:0xb290a433c724931c",
