@@ -314,7 +314,7 @@ img { display: block; max-width: 100%; }
 .section__head { margin-bottom: clamp(40px, 6vw, 80px); }
 
 .about { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 120px); align-items: center; }
-.about__media { position: relative; aspect-ratio: 4 / 5; border-radius: 4px; overflow: hidden; }
+.about__media { position: relative; aspect-ratio: 1 / 1; border-radius: 4px; overflow: hidden; }
 .about__media:hover .photo { transform: scale(1.04); }
 .about__text .h2 { margin-bottom: 28px; }
 .amenities { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; margin: 36px 0 48px; }
@@ -368,13 +368,19 @@ img { display: block; max-width: 100%; }
 /* Gallery */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: clamp(8px, 1.2vw, 16px);
-  max-width: 980px;
 }
-.gallery__item { position: relative; overflow: hidden; border-radius: 4px; aspect-ratio: 3 / 4; }
+.gallery__item { position: relative; overflow: hidden; border-radius: 4px; grid-column: span 2; aspect-ratio: 3 / 4; }
+.gallery__item:nth-child(-n + 2) { grid-column: span 3; aspect-ratio: 4 / 5; }
+@media (max-width: 899px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery__item, .gallery__item:nth-child(-n + 2) { grid-column: span 1; aspect-ratio: 3 / 4; }
+  .gallery__item:last-child { grid-column: span 2; aspect-ratio: 4 / 3; }
+}
 .gallery__item button { position: absolute; inset: 0; cursor: zoom-in; }
 .gallery__item .photo { transition: opacity 1s var(--ease), transform 1.2s var(--ease), filter 0.6s; filter: grayscale(0.35); }
+.gallery__item .photo { object-position: 50% 28%; }
 .gallery__item:hover .photo { transform: scale(1.06); filter: grayscale(0); }
 
 .lightbox {
@@ -459,7 +465,7 @@ img { display: block; max-width: 100%; }
   .nav__links, .nav__cta { display: none; }
   .burger { display: block; }
   .about, .visit { grid-template-columns: 1fr; }
-  .about__media { aspect-ratio: 4 / 3; }
+  .about__media { aspect-ratio: 1 / 1; }
   .scroll-cue { display: none; }
   .footer__inner { grid-template-columns: 1fr; }
   .map { min-height: 340px; }

@@ -33,6 +33,9 @@ export const images = {
   gallery: [
     { src: "/images/gallery-1.jpg", alt: "Flat bench press under the Never Give Up mural" },
     { src: "/images/gallery-2.jpg", alt: "Leg press under the Stop Thinking, Start Doing wall" },
+    { src: "/images/gallery-3.jpg", alt: "Cable station and the strength floor" },
+    { src: "/images/gallery-4.jpg", alt: "Dumbbell racks, benches and plate-loaded machines" },
+    { src: "/images/gallery-5.jpg", alt: "Squat racks and the lifting platform" },
   ],
 };
 
