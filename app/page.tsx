@@ -113,21 +113,29 @@ export default function Home() {
                 <span className="accent">Testimonials</span>
               </h2>
             </Reveal>
-            <p className="quotes__hint" aria-hidden="true">Swipe to read more →</p>
-            <div className="quotes">
-              {testimonials.map((t, i) => (
-                <Reveal key={t.name} delay={(i % 3) * 0.08} className="quote" viewport={{ once: true, amount: 0.05 }}>
-                  <span className="quote__mark" aria-hidden="true">
-                    &ldquo;
-                  </span>
-                  <blockquote>{t.quote}</blockquote>
-                  <p className="quote__name">
-                    {t.name}
-                    <span>Member</span>
-                  </p>
-                </Reveal>
-              ))}
-            </div>
+          </div>
+          <div className="wall" aria-label="Member testimonials">
+            {[
+              { list: testimonials, dir: "left" },
+              { list: [...testimonials].reverse(), dir: "right" },
+            ].map((row, r) => (
+              <div className={`wall__row wall__row--${row.dir}`} key={r}>
+                <div className="wall__track">
+                  {[...row.list, ...row.list].map((t, i) => (
+                    <figure className="quote" key={i} aria-hidden={i >= row.list.length ? true : undefined}>
+                      <span className="quote__mark" aria-hidden="true">
+                        &ldquo;
+                      </span>
+                      <blockquote>{t.quote}</blockquote>
+                      <figcaption className="quote__name">
+                        {t.name}
+                        <span>Member</span>
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

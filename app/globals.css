@@ -527,38 +527,46 @@ img { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) { .map__pulse { animation: none; } }
 
 
-/* Testimonials */
-.quotes__hint { display: none; }
-.quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.4vw, 20px); }
+/* Testimonials: two-row marquee wall */
+.wall {
+  display: grid;
+  gap: clamp(12px, 1.4vw, 20px);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.wall__row { overflow: hidden; padding: 10px 0; }
+.wall__track { display: flex; gap: clamp(12px, 1.4vw, 20px); width: max-content; animation: wall-left 70s linear infinite; }
+.wall__row--right .wall__track { animation-name: wall-right; animation-duration: 80s; }
+.wall__row:hover .wall__track { animation-play-state: paused; }
+@keyframes wall-left { from { transform: translateX(0); } to { transform: translateX(calc(-50% - clamp(6px, 0.7vw, 10px))); } }
+@keyframes wall-right { from { transform: translateX(calc(-50% - clamp(6px, 0.7vw, 10px))); } to { transform: translateX(0); } }
 .quote {
   position: relative;
+  flex: none;
+  width: clamp(280px, 30vw, 400px);
+  margin: 0;
   display: flex;
   flex-direction: column;
-  padding: 34px 30px 30px;
+  padding: 30px 28px 26px;
   border-radius: 4px;
   background: linear-gradient(180deg, #151515, #101010);
   box-shadow: inset 0 0 0 1px var(--line);
-  transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
 }
-.quote:hover { transform: translateY(-4px); box-shadow: inset 0 0 0 1px rgba(255, 90, 31, 0.35), 0 20px 50px -20px rgba(255, 90, 31, 0.25); }
-.quote__mark { font-family: var(--display); font-size: 84px; line-height: 0.6; color: var(--accent); height: 34px; }
-.quote blockquote { margin: 18px 0 28px; color: #d6d3cc; font-size: 16px; line-height: 1.65; flex: 1; }
-.quote__name { font-weight: 600; font-size: 15px; display: flex; flex-direction: column; gap: 2px; padding-top: 20px; border-top: 1px solid var(--line); }
+.quote:hover { transform: translateY(-8px); box-shadow: inset 0 0 0 1px rgba(255, 90, 31, 0.4), 0 22px 50px -22px rgba(255, 90, 31, 0.35); }
+.quote__mark { font-family: var(--display); font-size: 72px; line-height: 0.6; color: var(--accent); height: 28px; }
+.quote blockquote { margin: 16px 0 24px; color: #d6d3cc; font-size: 15px; line-height: 1.65; flex: 1; }
+.quote__name { font-weight: 600; font-size: 15px; display: flex; flex-direction: column; gap: 2px; padding-top: 18px; border-top: 1px solid var(--line); }
 .quote__name span { font-weight: 400; font-size: 13px; color: var(--muted); }
-@media (max-width: 1100px) { .quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) {
-  .quotes {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 12px;
-    margin: 0 calc(var(--pad) * -1);
-    padding: 4px var(--pad) 12px;
-    scrollbar-width: none;
-  }
-  .quotes::-webkit-scrollbar { display: none; }
-  .quote { flex: 0 0 84%; scroll-snap-align: center; padding: 28px 24px 24px; }
-  .quotes__hint { display: block; margin: -24px 0 16px; font-size: 13px; color: var(--muted); }
+  .wall { -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+  .wall__track { animation-duration: 55s; }
+  .wall__row--right .wall__track { animation-duration: 62s; }
+  .quote { width: 78vw; padding: 24px 22px 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wall__row { overflow-x: auto; }
+  .wall__track { animation: none; }
 }
 
 /* Responsive */
