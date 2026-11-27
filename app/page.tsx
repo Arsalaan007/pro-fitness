@@ -181,9 +181,9 @@ export default function Home() {
           <div className="container">
             <Reveal>
               <h2 className="cta__title">
-                Your first session
+                Drop by for
                 <br />
-                is <span className="accent">on us.</span>
+                <span className="accent">a session.</span>
               </h2>
             </Reveal>
             <Reveal delay={0.15}>
