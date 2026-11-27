@@ -498,11 +498,6 @@ img { display: block; max-width: 100%; }
   0%, 100% { box-shadow: 0 0 34px 0 rgba(255, 90, 31, 0.10); }
   50% { box-shadow: 0 0 70px 6px rgba(255, 90, 31, 0.30); }
 }
-.gallery__item { animation: breathe-halo 4.8s ease-in-out infinite; }
-.gallery__item:nth-child(2) { animation-delay: -0.96s; }
-.gallery__item:nth-child(3) { animation-delay: -1.92s; }
-.gallery__item:nth-child(4) { animation-delay: -2.88s; }
-.gallery__item:nth-child(5) { animation-delay: -3.84s; }
 @media (max-width: 899px) {
   @keyframes breathe-sm {
     0%, 100% { box-shadow: 0 0 22px 0 rgba(255, 90, 31, 0.10), 0 0 0 1px rgba(255, 90, 31, 0.10); }
@@ -513,10 +508,9 @@ img { display: block; max-width: 100%; }
     50% { box-shadow: 0 0 40px 3px rgba(255, 90, 31, 0.28); }
   }
   .about__media { animation-name: breathe-sm; }
-  .gallery__item { animation-name: breathe-halo-sm; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .about__media, .gallery__item { animation: none; box-shadow: 0 0 40px 2px rgba(255, 90, 31, 0.16); }
+  .about__media { animation: none; box-shadow: 0 0 40px 2px rgba(255, 90, 31, 0.16); }
 }
 
 
