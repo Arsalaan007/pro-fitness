@@ -157,7 +157,7 @@ export default function Home() {
                 <span className="map__pin" aria-hidden="true">
                   <span className="map__pulse" />
                   <svg width="34" height="44" viewBox="0 0 34 44" fill="none">
-                    <path d="M17 43s15-14.2 15-26A15 15 0 0 0 2 17c0 11.8 15 26 15 26Z" fill="#d62a1a" stroke="#0a0a0a" strokeWidth="2" />
+                    <path d="M17 43s15-14.2 15-26A15 15 0 0 0 2 17c0 11.8 15 26 15 26Z" fill="#ff5a1f" stroke="#0a0a0a" strokeWidth="2" />
                     <circle cx="17" cy="17" r="5.5" fill="#0a0a0a" />
                   </svg>
                 </span>
