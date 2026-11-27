@@ -26,16 +26,19 @@ export const site = {
 /** tel: link for the booking buttons, built from site.phone */
 export const tel = `tel:${site.phone.replace(/[^\d+]/g, "")}`;
 
-export const logoSrc = "/logo.png";
+/** Prefix for public files when the site lives under a sub-path (GitHub Pages). */
+const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+export const logoSrc = `${base}/logo.png`;
 
 export const images = {
-  about: "/images/about.jpg",
+  about: base + "/images/about.jpg",
   gallery: [
-    { src: "/images/gallery-1.jpg", alt: "Flat bench press under the Never Give Up mural" },
-    { src: "/images/gallery-2.jpg", alt: "Leg press under the Stop Thinking, Start Doing wall" },
-    { src: "/images/gallery-3.jpg", alt: "Cable station and the strength floor" },
-    { src: "/images/gallery-4.jpg", alt: "Dumbbell racks, benches and plate-loaded machines" },
-    { src: "/images/gallery-5.jpg", alt: "Squat racks and the lifting platform" },
+    { src: base + "/images/gallery-1.jpg", alt: "Flat bench press under the Never Give Up mural" },
+    { src: base + "/images/gallery-2.jpg", alt: "Leg press under the Stop Thinking, Start Doing wall" },
+    { src: base + "/images/gallery-3.jpg", alt: "Cable station and the strength floor" },
+    { src: base + "/images/gallery-4.jpg", alt: "Dumbbell racks, benches and plate-loaded machines" },
+    { src: base + "/images/gallery-5.jpg", alt: "Squat racks and the lifting platform" },
   ],
 };
 
