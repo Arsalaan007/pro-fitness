@@ -20,7 +20,7 @@ export const site = {
   // Plain map centred on the gym (no Google place card or rating); our own pin sits on top
   mapEmbed: "https://maps.google.com/maps?ll=19.135287,72.813245&z=17&output=embed",
   coords: { lat: 19.135287, lng: 72.813245 },
-  amenities: ["Fully air-conditioned", "Personal training", "Chilled water", "Free weights & machines"],
+  amenities: ["Fully air-conditioned", "Personal training", "Chilled water", "Free weights & machines", "Good ambience"],
 };
 
 // Photos from the Google listing, chosen so that no people appear in them (selfies and mirror reflections excluded).
