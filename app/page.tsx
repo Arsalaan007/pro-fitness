@@ -198,7 +198,7 @@ export default function Home() {
       <footer className="footer">
         <div className="container footer__inner">
           <a href="#top" className="footer__logo" aria-label="Pro Fitness home">
-            <Image src={logoSrc} alt="Pro Fitness" width={480} height={219} />
+            <Image src={logoSrc} alt="Pro Fitness" width={300} height={137} />
           </a>
           <p>{site.address}</p>
           <div className="footer__links">

@@ -24,36 +24,21 @@ export default function Hero() {
       <div className="hero__grid" aria-hidden="true" />
 
       <motion.div className="hero__content container" style={{ opacity: fade }}>
-        <motion.p
-          className="eyebrow"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease, delay: 0.4 }}
-        >
+        <p className="eyebrow hero__in" style={{ animationDelay: "0.3s" }}>
           <span className="dot" /> {site.area}
-        </motion.p>
+        </p>
 
         <h1 className="hero__title">
           {lines.map((line, i) => (
             <span className="mask" key={line}>
-              <motion.span
-                className={i === 2 ? "accent" : ""}
-                initial={{ y: "105%" }}
-                animate={{ y: "0%" }}
-                transition={{ duration: 1.1, ease, delay: 0.5 + i * 0.12 }}
-              >
+              <span className={`hero__line ${i === 2 ? "accent" : ""}`} style={{ animationDelay: `${0.15 + i * 0.12}s` }}>
                 {line}
-              </motion.span>
+              </span>
             </span>
           ))}
         </h1>
 
-        <motion.div
-          className="hero__bottom"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease, delay: 1.05 }}
-        >
+        <div className="hero__bottom hero__in" style={{ animationDelay: "0.7s" }}>
           <p className="lead">
             A fully air-conditioned gym on Yari Road, with serious equipment and coaches who care
             about your form. Open 6 AM to midnight, Monday to Saturday, and 9 AM to 3 PM on Sundays.
@@ -66,7 +51,7 @@ export default function Hero() {
               Explore programs
             </a>
           </div>
-        </motion.div>
+        </div>
       </motion.div>
 
       <motion.a

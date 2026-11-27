@@ -46,7 +46,7 @@ export default function Nav() {
         transition={{ duration: 0.8, ease, delay: 0.2 }}
       >
         <a href="#top" className="logo logo--img" onClick={() => setOpen(false)} aria-label="Pro Fitness home">
-          <Image src={logoSrc} alt="Pro Fitness" width={480} height={219} priority />
+          <Image src={logoSrc} alt="Pro Fitness" width={300} height={137} priority />
         </a>
 
         <nav className="nav__links" aria-label="Main">
