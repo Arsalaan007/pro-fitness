@@ -89,7 +89,7 @@ export default function Home() {
             </Reveal>
             <div className="programs">
               {programs.map((p, i) => (
-                <Reveal key={p.n} delay={i * 0.08} className="program">
+                <Reveal key={p.n} delay={i * 0.08} className="program glow-border">
                   <span className="program__n">{p.n}</span>
                   <h3>{p.title}</h3>
                   <p>{p.copy}</p>
@@ -144,7 +144,7 @@ export default function Home() {
                 </a>
               </Reveal>
             </div>
-            <Reveal delay={0.15} className="map">
+            <Reveal delay={0.15} className="map glow-border">
               <iframe src={site.mapEmbed} title="Pro Fitness on Google Maps" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
             </Reveal>
           </div>
